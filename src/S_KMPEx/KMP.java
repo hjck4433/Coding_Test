@@ -40,12 +40,5 @@ public class KMP {
             if (c >= 'A' && c <= 'Z') System.out.print(c);
         }
 
-
-
-
-
-
-
-
     }
 }
