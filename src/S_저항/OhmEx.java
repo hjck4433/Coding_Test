@@ -22,14 +22,13 @@ public class OhmEx {
         String[] colors = {"black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white" };
         long sum = 0;
 
-
         for(int i = 0; i < 3; i++) {
             String color = sc.next();
-            int n = 0;
+            int n = 0; // colors 인덱스 담는 용도
             for(int j = 0; j < colors.length; j++) {
                 if(color.equalsIgnoreCase(colors[j])) n = j;
             }
-            if(i < 2) sum += i == 0 ? n*10 : n;
+            if(i < 2) sum += i == 0 ? n * 10 : n;
             else sum *= (long) (Math.pow(10, n));
         }
 
