@@ -1,4 +1,6 @@
-package N_핸드폰요금;
+package S_핸드폰요금;
+
+import java.util.Scanner;
 
 // 영식 요금제 Y : 30초 10원 (30초가 되면 2통)
 // 민식 요금제 M : 60초 15원 (60초가 되면 2통)
@@ -9,6 +11,10 @@ package N_핸드폰요금;
 // 3 40 40 40 => M 45
 public class PaymentSystem {
     public static void main(String[] args) {
-
+        Scanner sc = new Scanner(System.in);
+        System.out.print("통화 횟수 : ");
+        int n = sc.nextInt();
+        Payment payment = new Payment(n);
+        payment.cheapPayment();
     }
 }
