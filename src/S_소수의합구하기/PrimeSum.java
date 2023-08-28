@@ -1,4 +1,4 @@
-package N_소수의합구하기;
+package S_소수의합구하기;
 
 import java.util.Scanner;
 
