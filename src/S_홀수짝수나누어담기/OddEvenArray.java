@@ -1,4 +1,4 @@
-package N_홀수짝수나누어담기;
+package S_홀수짝수나누어담기;
 
 // 7개의 정수를 입력 받음
 // 홀수와 짝수 배열로 나누어 담는 함수 만들기
@@ -10,7 +10,15 @@ package N_홀수짝수나누어담기;
 
 public class OddEvenArray {
     public static void main(String[] args) {
+        OddEven oddEven = new OddEven();
+        oddEven.inputNums();
+        oddEven.evenOddCalc();
+        oddEven.evenOddOutput();
 
+        OddEvenList oddEvenList = new OddEvenList();
+        oddEvenList.inputAndDiv();
+        oddEvenList.outPutEvenOdd();
+        oddEvenList.outPutEvenOdd2();
 
     }
 }
