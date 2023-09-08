@@ -5,6 +5,8 @@ package N_Baek_1316;
 // 단어 N개를 입력으로 받아 그룹 단어의 개수를 출력하는 프로그램을 작성하시오.
 //3 happy new year => 3
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -12,5 +14,34 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int cnt = 0;
+        for (int i = 0; i < n; i++) {
+            String word = sc.next();
+            int prevIdx = 0;
+            int idx = 0;
+            for(int j = 0; j < word.length(); j++) {
+                String str = Character.toString(word.charAt(j));
+                prevIdx = j;
+                for(int k = 1; k < word.length(); k++) {
+                    String str2 = Character.toString(word.charAt(k));
+                    idx = k;
+                    if(str.equals(str2)) {
+                        if (idx - prevIdx == 1) {
+                            str = Character.toString(word.charAt(k));
+                            prevIdx = k;
+                        }else if (idx - prevIdx > 1) break;
+                    }
+
+                }
+            }
+            if (idx - prevIdx == 1) cnt++;
+        }
+        System.out.println(cnt);
+
+
     }
 }
+
+/*aba
+abab
+abcabc
+a*/
