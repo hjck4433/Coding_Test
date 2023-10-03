@@ -4,6 +4,9 @@ package N_Baek_2869;
 //달팽이가 나무 막대를 모두 올라가려면, 며칠이 걸리는지 구하는 프로그램을 작성하시오.
 
 // 2 1 5 => 4
+// 5 1 6 => 2
+// 3 1 6 => 3
+// 100 99 1000000000 => 999999901
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -11,12 +14,21 @@ public class Main {
         int a = sc.nextInt();
         int b = sc.nextInt();
         int v = sc.nextInt();
-        int r = v / (a-b);
-        if (v % (a-b) >= b) r+=1;
+
+        // 3 1 6 === 1  나와야하는 값 = 3
+
+        int h = v - a;
+        int r = h / (a-b);
+        if (h < (a-b)) r = v / (a-b);
+        if (v % (a-b) == 0) {
+            r =  v / (a-b);
+        }else {
+            if (r*(a-b) + a >= v ) r += 1;
+        }
 
         System.out.println(r);
 
-        // 시간초과
+         //시간초과
 //        int cnt = 0;
 //        int h = 0;
 //
