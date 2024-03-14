@@ -1,4 +1,4 @@
-package S_알람설정하기;
+package S_알람설정하기_Baek_2884;
 import java.util.Scanner;
 // 45분 일찍 알람 설정하기
 // 나가야 할 시간 입력 하면 45분 전 시간이 나옴
@@ -33,6 +33,7 @@ public class AlarmSet {
         m = time % 60;
 
         System.out.printf("%d시 %d분",h,m);
+
 
 
     }
