@@ -1,4 +1,4 @@
-package N_Baek_2563;
+package S_Baek_2563;
 
 import java.util.Scanner;
 
@@ -15,13 +15,30 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
+        int[][] paper = new int[100][100];
         int n = sc.nextInt();
-        int sum = n * 100;
-        int[][] arr = new int[n][2];
-        for (int i = 0; i < n ; i++) {
-            arr[i][0] = sc.nextInt() + 10;
-            arr[i][1] = sc.nextInt() + 10;
+
+        for(int i= 0; i < n; i++) {
+            int left = sc.nextInt();
+            int bottom = sc.nextInt();
+            for(int j = left; j < left + 10; j++){
+                for(int k = bottom; k < bottom + 10; k++){
+                    paper[k][j] = 1;
+                }
+            }
         }
+
+        int cnt = 0;
+        for(int i = 0; i < 100; i++) {
+            for(int j = 0; j < 100; j++) {
+                if(paper[i][j] == 1) {
+                    cnt += paper[i][j];
+                }
+            }
+        }
+
+        System.out.println(cnt);
 
     }
 }
